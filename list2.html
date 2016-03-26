@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+
+
+
+</style>
+
+<body>
+
+<h1>Todo List</h1>
+<ul>
+  <li>"new" - add a Todo</li>
+  <li>"list" - list all todos</li>
+  <li>"delete" - remove a specific todo</li>
+  <li>"quit" - quit app</li>
+</ul>
+
+</body>
+
+<script type="text/javascript">
+
+
+var x = ["buy fish"];
+var input = prompt("enter:");
+
+while(input !== "quit"){
+
+  
+  if(input==="list"){
+    listTodos();
+  }else if(input==="new"){
+    addTodo();
+  }else if(input==="delete"){
+   deleteTodo();
+  }
+
+  input = prompt("enter again");
+  
+}
+console.log("you just quitted");
+
+function listTodos(){
+  x.forEach(function(todo,i){
+    console.log(i + ": " + todo);
+  });
+}
+
+function addTodo(){
+  var newX = prompt("enter new list");
+    x.push(newX);
+    console.log("added todo");
+}
+
+function deleteTodo(){
+   var del = prompt("enter index to delete");
+    x.splice(del,1);
+    console.log("deleted todo");
+}
+
+</script>
+
+
+
+
+</html>
