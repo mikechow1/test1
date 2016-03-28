@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+#box {
+    width:20px;
+    height:20px;
+    background-color:red;
+    display:none;
+}
+
+
+</style>
+
+<body>
+
+<div id="box"></div>
+
+</body>
+
+<script type="text/javascript">
+
+function mBox(){
+    var timeX = Math.random();
+    timeX = timeX * 5000;   
+
+    setTimeout(function()
+        {
+            document.getElementById("box").style.display="block";
+        },timeX);
+}
+
+document.getElementById("box").onclick=function()
+    {
+        document.getElementById("box").style.display="none";
+        mBox();
+    }
+
+mBox();
+
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
