@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+<h4>add numbers</h4>
+
+<p>
+	<input id="num1"> + <input id="num2">
+</p>
+<p id="summm"></p>
+</body>
+
+<script type="text/javascript">
+
+var numA = document.getElementById("num1");
+var numB = document.getElementById("num2");
+var sumX = document.getElementById("summm");
+
+numA.addEventListener("input",add);
+numB.addEventListener("input",add);
+
+function add(){
+	var X = parseFloat(numA.value);
+	var Y = parseFloat(numB.value);
+	sumX.innerHTML="your sum is " +(X+Y); 
+}
+
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
