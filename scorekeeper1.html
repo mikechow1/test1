@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+
+.winner{
+	color:green;
+}
+
+</style>
+
+<body>
+
+<h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+<p>Playing to: <span>5</span></p>
+<input type="number">
+<button id="p1">Player One</button>
+<button id="p2">Player Two</button>
+<button id="reset">Reset</button>
+
+</body>
+
+<script type="text/javascript">
+
+var p1Button = document.querySelector("#p1");
+var p2Button = document.querySelector("#p2");
+var p1Display = document.querySelector("#p1Display");
+var p2Display = document.querySelector("#p2Display");
+var resetButton = document.getElementById("reset");
+var numInput = document.querySelector("input")
+var p = document.querySelector("p");
+var winningScoreDisplay = document.querySelector("p span")
+var p1Score = 0;
+var p2Score = 0;
+var gameOver = false;
+var winningScore = 5;
+
+p1Button.addEventListener("click", function(){
+	if(!gameOver){
+		p1Score++;
+		if(p1Score===winningScore){
+			p1Display.classList.add("winner");
+			gameOver=true;
+		}
+	p1Display.textContent=p1Score;
+	}
+})
+
+p2Button.addEventListener("click", function(){
+	if(!gameOver){
+		p2Score++;
+		if(p2Score===winningScore){
+			p2Display.classList.add("winner");
+			gameOver=true;
+		}
+	p2Display.textContent=p2Score;
+	}
+})
+
+resetButton.addEventListener("click",function(){
+	reset();
+})
+
+function reset(){
+	p1Score =0;
+	p2Score =0;
+	p1Display.textContent =0;
+	p2Display.textContent =0;
+	p1Display.classList.remove("winner");
+	p2Display.classList.remove("winner");
+	gameOver=false;
+}
+
+
+
+
+numInput.addEventListener("change",function(){
+	winningScoreDisplay.textContent = this.value;
+	winningScore = Number(this.value);
+	reset();
+});
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
