@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<style>
+
+body{
+	background-color: #232323;
+}
+
+.square{
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+}
+
+#container{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h1{
+	color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<h1>The Great RGB Color Game</h1>
+
+<div id="container">
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+	<div class="square"></div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+var squareX = document.querySelectorAll(".square");
+var colors = generateRandomColors(6);
+var pickedColor = pickColor();
+
+
+for (var i=0; i<squareX.length; i++){
+	squareX[i].style.background = colors[i];
+	squareX[i].addEventListener("click", function(){
+		var clickedColor = this.style.background;
+
+		if(clickedColor===pickedColor){
+			changeColors(clickedColor);
+		}else{
+			this.style.background = "#232323"
+		}
+	})
+
+}
+
+function changeColors(colorX){
+	for(var i=0; i<squareX.length; i++){
+		squareX[i].style.background = colorX;
+	}
+}
+
+function pickColor(){
+	var random = Math.floor(Math.random()*colors.length);
+	return colors[random];
+}
+
+function generateRandomColors(num){
+	var arr = []
+	for (var i=0; i<num; i++){
+		arr.push(randomColor())
+	}
+	return arr;
+
+	function randomColor(){
+		var r = Math.floor(Math.random()*256);
+		var g = Math.floor(Math.random()*256);
+		var b = Math.floor(Math.random()*256);
+
+		return "rgb(" + r + ", " + g + ", " + b + ")";
+	}
+
+}
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
