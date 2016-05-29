@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+</head>
+
+<style>
+
+h2{
+background-color: orange;
+}
+
+</style>
+
+<body>
+
+<h1>heading one</h1>
+<h2>heading two</h2>
+<h3>heading three</h3>
+
+</body>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	
+
+	$("h1").click(function(){
+		$("h2").hide(1000,function() { 
+			$("h3").fadeOut(1000);
+		});
+	})
+})
+
+
+
+</script>
+
+
+
+
+
+</html>
