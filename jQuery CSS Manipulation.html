@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>jQuery CSS Manipulation</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+</head>
+
+<style>
+
+.shrink{
+	font-size: 20px;
+}
+
+.emphasis{
+	text-decoration: underline;
+	color: red;
+}
+
+</style>
+
+<body>
+
+<h1 class="emphasis">test1</h1>
+<h1>test2</h1>
+<h1>test3</h1>
+
+</body>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	// $("h1").mouseenter(function(){
+	// 	$(this).css({
+	// 	"margin-left": "+=50px",
+	// 	"background-color":"red"	
+	// });
+	// })
+
+	$("h1").mouseenter(function(){
+		$(this).removeClass("emphasis").addClass("shrink");
+	})
+})
+
+</script>
+
+
+
+
+
+</html>
