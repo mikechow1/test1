@@ -1,0 +1,59 @@
+</!doctype>
+
+<html>
+
+<head>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<title>anonymousClosureWithGlobal</title>
+
+</head>
+
+<style>
+
+
+</style>
+
+
+
+<body>
+
+
+
+</body>
+
+<script>
+
+var global = 'Hello, I am a global variable :)';
+
+(function () {
+  // We keep these variables private inside this closure scope
+  
+  var myGrades = [93, 95, 88, 0, 55, 91];
+  
+  var average = function() {
+    var total = myGrades.reduce(function(accumulator, item) {
+      return accumulator + item}, 0);
+    
+    return 'Your average grade is ' + total / myGrades.length + '.';
+  }
+
+  var failing = function(){
+    var failingGrades = myGrades.filter(function(item) {
+      return item < 70;});
+      
+    return 'You failed ' + failingGrades.length + ' times.';
+  }
+
+  console.log(failing());
+  console.log(global);
+}());
+
+// 'You failed 2 times.'
+// 'Hello, I am a global variable :)'
+
+
+</script>
+
+</html>
