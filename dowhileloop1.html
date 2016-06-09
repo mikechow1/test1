@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var randomNum = getRandomNum(2); 
+var guess; //hold the player's guess that's typed into the prompt
+var guessCount = 0; //keep track of the # of guesses
+var correctGuess = false; //keep track whether the player correctly guesses the answer
+
+function getRandomNum( upper ){
+	var num = Math.floor(Math.random() * upper ) + 1;
+	return num;
+}
+
+do{
+	guess = prompt('I am thinking of a number between 1 and 2.  What is it?');
+	guessCount += 1;
+	if(parseInt(guess) === randomNum){
+		correctGuess = true;
+	}	
+} while ( !correctGuess ) 
+	document.write('<h1>you guess the number!</h1>');
+	document.write('it took you ' +guessCount+ 'tries to guess the number ' +randomNum);
+
+
+
+</script>
+
+
+
+
+
+</html>
