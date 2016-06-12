@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+</head>
+
+<style>
+
+
+</style>
+
+<body id="output">
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var questions = [
+    ['how many states in the US?',50],
+    ['how many continents?',7],
+    ['how many legs?',6]
+];
+
+var correctAnswers = 0;
+var questionX;
+var answer;
+var response;
+var correct = [];
+var wrong = [];
+
+function print(message){
+    var outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = message;
+}
+
+function buildList(arr){
+    var listHTML = '<ol>';
+        for(var i=0; i<arr.length; i++){
+            listHTML += '<li>' + arr[i] + '</li>';
+        }
+        listHTML += '</ol>';
+        return listHTML;
+}
+
+
+for(var i=0; i<questions.length; i++){
+    questionX = questions[i][0];
+    answer = questions[i][1];
+    response = parseInt(prompt(questionX));
+    if (response === answer ) {
+        correctAnswers += 1;
+        correct.push(questionX);
+    }else{
+        wrong.push(questionX);
+    }
+}
+
+html = 'you got ' + correctAnswers + ' question(s) right.';
+html += '<h2>you got these questions correct:</h2>';
+html += buildList(correct);
+html += '<h2>you got these questions wrong:</h2>';
+html += buildList(wrong);
+
+print(html);
+
+</script>
+
+
+
+
+
+</html>
