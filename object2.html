@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
+</head>
+
+<style>
+
+
+</style>
+
+<body id='output'>
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var students = [
+    {
+        name: 'Dave',
+        track: 'Front End',
+        achievements: '158',
+        points: 14253
+    },
+    {
+         name: 'Judy',
+        track: 'iOS',
+        achievements: '168',
+        points: 14333
+    },
+ {
+         name: 'John',
+        track: 'PHP',
+        achievements: '68',
+        points: 12333
+    },
+     {
+         name: 'Ken',
+        track: 'WordPress',
+        achievements: '468',
+        points: 34233
+    },
+     {
+         name: 'Molly',
+        track: 'Rails',
+        achievements: '16',
+        points: 432
+    },
+
+];
+
+
+var message = '';
+var studentX;
+var search;
+
+function print(message){
+    var outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = message;
+}
+
+function studentReport(studentX){
+    var report = '<h2>Student: ' + studentX.name + '</h2>';
+    report += '<p>Track: ' + studentX.track + '</p>';
+    report += '<p>achievements: ' + studentX.achievements + '</p>';
+    report += '<p>points: ' + studentX.points + '</p>';
+    return report;
+}
+
+while(true){
+    search = prompt('enter a name or enter "quit" to end');
+    if(search === null || search.toLowerCase()==="quit"){
+        break;
+    }
+    for(var i = 0; i < students.length; i++){
+    studentX = students[i];
+
+    if(studentX.name===search){
+        message = studentReport(studentX);
+        print(message);
+    }
+    }
+}
+
+print(message);
+
+</script>
+
+
+
+
+
+</html>
