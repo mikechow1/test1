@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise</title>
+</head>
+
+<body id='output'>
+
+
+
+</body>
+
+<style type="text/css">
+	
+	
+</style>
+
+<script type="text/javascript">
+
+getEmployeeDetails();
+
+function getEmployeeDetails(){
+	employee.prototype.getName = function(){
+		return this.name.toUpperCase();
+}
+
+var e1 = new employee('mark');
+var e2 = new employee('sara');
+
+document.write('e1 name = ' + e1.getName() + '<br/>');
+document.write('e2 name = ' + e2.getName() + '<br/>');
+}
+
+//reuseable codes here.  should be in a different file.
+function employee(name){
+	this.name = name;
+}
+
+employee.prototype.getName = function(){
+	return this.name;
+}
+
+
+</script>
+</html>

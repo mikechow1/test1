@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exercise</title>
+</head>
+
+<body id='output'>
+
+
+
+</body>
+
+<style type="text/css">
+	
+	
+</style>
+
+<script type="text/javascript">
+
+function Employee(name){
+	this.name = name;
+}
+
+Employee.prototype.getName = function(){
+	return this.name;
+}
+
+var e1 = new Employee('Mark');
+var e2 = new Employee('Sara');
+
+document.write('E1 Name = ' + e1.getName() + '<br/>');
+document.write('E2 Name = ' + e2.getName() + '<br/>');
+
+</script>
+</html>
