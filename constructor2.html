@@ -9,13 +9,13 @@
 
 	<title>Exercise</title>
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+	
 
 </head>
 
-<style>
+
+<style type="text/css">
+
 * {
   font-family: Helvetica, Arial, sans-serif;
   text-align: center;
@@ -40,42 +40,48 @@ button {
   font-size:80px;
 }
 
+
 </style>
+
 
 <body id='output'>
 
- <p id="placeholder">
-  
-  </p>
-  <button id="button">Roll Dice</button>
-
+<p id="placeholder"></p>
+<button id="button">roll dice</button>
 
 </body>
 
 
 <script type="text/javascript">
 
-function DiceX(sides){
-  this.sides = sides;
-  this.roll = function(){
-    var randomX = Math.floor(Math.random() * this.sides) + 1;
-    return randomX;
-  }
+
+//use prototype as templates for objects. for values and behavior to be shared between instances of objects.
+
+function Dice(sides){
+	this.sides = sides;
 }
 
-var dice12 = new DiceX(12);
+Dice.prototype.roll = function diceRoll(){
+    var randNum = Math.floor(Math.random()*this.sides) + 1;
+    return randNum;
+  }
+//the prototype on a constructor function is an object like an object literal.  And we can assign a function to it and it becomes a method.
+
+var dice = new Dice(6);
+var dice10 = new Dice(10);
 
 function printX(num){
-  var holderX = document.getElementById('placeholder');
-  holderX.innerHTML = num;
+	var placeholder = document.getElementById("placeholder");
+	placeholder.innerHTML = num;
 }
 
-var buttonX = document.getElementById('button');
-
-buttonX.onclick = function(){
-  var result = dice12.roll();
- printX(result);
+var button = document.getElementById("button");
+button.onclick = function(){
+	var result = dice.roll();
+	printX(result);
 }
+
+
 
 </script>
 
