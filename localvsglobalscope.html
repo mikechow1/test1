@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+
+</head>
+
+
+<style type="text/css">
+
+
+
+
+</style>
+
+
+<body id='output'>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+//Global vs Local Scope in Functions
+//It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+
+/*
+Instructions
+Add a local variable to myOutfit to override the value of outerWear with "sweater".
+*/
+
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  var outerWear = "sweater";
+  
+  return outerWear;
+}
+
+myOutfit();
+
+</script>
+
+
+
+
+
+</html>

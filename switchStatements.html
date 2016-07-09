@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+
+</head>
+
+
+<style type="text/css">
+
+
+
+
+</style>
+
+
+<body id='output'>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+//Selecting from many options with Switch Statements
+
+/*
+If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which defines various possible values. Statements are executed from the first matched case value until a break is encountered.
+
+case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
+
+Instructions
+Write a switch statement which tests val and sets answer for the following conditions:
+1 - "alpha"
+2 - "beta"
+3 - "gamma"
+4 - "delta"
+*/
+
+function caseInSwitch(val){
+	var answer = "";
+	switch(val){
+		case 1:
+			return "alpha";
+			break;
+		case 2:
+			return "beta";
+			break;
+		case 3:
+			return "gamma";
+			break;
+		case 4:
+			return "delta";
+			break;
+	}
+	return answer;
+}
+caseInSwitch(1);
+
+
+
+</script>
+
+
+
+
+
+</html>

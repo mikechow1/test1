@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+
+</head>
+
+
+<style type="text/css">
+
+
+
+
+</style>
+
+
+<body id='output'>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+//Accessing Nested Objects 
+
+/*
+The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+
+Instructions
+Access the myStorage object to retrieve the contents of the glove box. Use bracket notation for properties with a space in their name.
+*/
+
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+// Only change code below this line
+
+var gloveBoxContents =  myStorage.car.inside["glove box"];
+
+</script>
+
+
+
+
+
+</html>

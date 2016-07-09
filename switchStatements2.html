@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Exercise</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+
+</head>
+
+
+<style type="text/css">
+
+
+
+
+</style>
+
+
+<body id='output'>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+//Multiple Identical Options in Switch Statements 
+
+/*
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent them in a switch statement like this:
+
+Instructions
+Write a switch statement to set answer for the following ranges:
+1-3 - "Low"
+4-6 - "Mid"
+7-9 - "High"
+*/
+
+function sequentialSizes(val){
+	var answer = "";
+
+	switch(val){
+		case 1:
+		case 2:
+		case 3:
+			answer = "low";
+			break;
+		case 4:
+		case 5:
+		case 6:
+			answer = "mid";
+			break;
+		case 7:
+		case 8:
+		case 9:
+			answer = "high";
+			break;
+	}
+	return answer;
+	}
+sequentialSizes(1);
+
+
+</script>
+
+
+
+
+
+</html>

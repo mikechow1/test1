@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+
+	<title>Global Scope and Functions</title>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+
+</head>
+
+
+<style type="text/css">
+
+
+
+
+</style>
+
+
+<body id='output'>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+//Global Scope and Functions
+/*
+In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+
+Variables which are used without the var keyword are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with var.
+*/
+
+/*
+Instructions
+Declare a global variable myGlobal outside of any function. Initialize it to have a value of 10
+
+Inside function fun1, assign 5 to oopsGlobal without using the var keyword.
+*/
+
+var myGlobal = 10;
+oopsGlobal = 5;
+
+function fun2() {
+  var output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+
+
+</script>
+
+
+
+
+
+</html>
