@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+
+/*
+Recursion
+I love how simple and clear this solution is. You can clearly see that the String.charAt and String.substr methods are being used to pass through a different value by calling itself each time until the string is empty of which the ternary would just return an empty string instead of using recursion to call itself. This would probably yield the second best performance after the second solution.
+*/
+
+function testing(str){
+	return (str === '')? '' : testing(str.substr(1)) + str.charAt(0);
+}
+
+testing('hello');
+
+</script>
+
+</html>

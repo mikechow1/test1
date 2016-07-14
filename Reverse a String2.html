@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+
+<script type="text/javascript">
+
+/*
+Decrementing while-loop:
+Although pretty verbose, this solution does have its advantages over solution one. You’re not creating an array and you’re just concatenating a string based on characters from the source string.
+
+From a performance perspective, this one would probably yield the best results (although untested). For extremely long strings, the performance gains might drop out the window though.
+*/
+
+function testing(str){
+	var temp = '';
+	var i = str.length;
+	while(i > 0){
+		temp += str.substring(i - 1, i);
+		i--;
+	}
+	return temp;
+}
+testing("hello");
+
+
+</script>
+
+</html>
